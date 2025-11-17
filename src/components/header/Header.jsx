@@ -12,7 +12,7 @@ export const Header = () => {
             className="flex items-center group transition-transform duration-300 hover:scale-105"
           >
             <img
-              src="./public/img/logo.svg"
+              src="/img/logo.svg"
               alt="Logo Guitarra"
               className="w-32 sm:w-36 lg:w-40 h-auto"
             />
