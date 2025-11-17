@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { ShoppingCart, Trash2, Plus, Minus, X } from "lucide-react";
 import { CartContext } from "../../context/CartContext";
+import { currentFormatter } from "../../utils/currentFormatter";
 
 export const Carrito = () => {
   const { cart, setCart, removeFromCart } = useContext(CartContext);
@@ -107,7 +108,7 @@ export const Carrito = () => {
                         </div>
 
                         <p className="font-bold text-emerald-400 text-sm mb-3">
-                          ${item.price.toFixed(2)}
+                          {currentFormatter(item.price)}
                         </p>
 
                         {/* Controles */}

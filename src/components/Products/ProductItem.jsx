@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ShoppingCart } from "lucide-react";
 import { CartContext } from "../../context/CartContext";
+import { currentFormatter } from "../../utils/currentFormatter";
 
 export const ProductItem = ({ product }) => {
   const { cart, addToCart } = useContext(CartContext);
@@ -51,7 +52,7 @@ export const ProductItem = ({ product }) => {
 
         <div className="flex items-center justify-between pt-2">
           <span className="text-2xl sm:text-3xl font-bold text-emerald-400 drop-shadow-sm">
-            ${product.price}
+            {currentFormatter(product.price)}
           </span>
 
           <button
