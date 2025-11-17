@@ -150,7 +150,7 @@ export const Carrito = () => {
                     <div className="mt-3 pt-3 border-t border-zinc-800 flex justify-between text-sm">
                       <span className="text-zinc-500">Subtotal</span>
                       <span className="font-semibold text-emerald-400">
-                        ${(item.price * item.quantity).toFixed(2)}
+                        {currentFormatter(item.price * item.quantity)}
                       </span>
                     </div>
                   </div>
@@ -168,7 +168,7 @@ export const Carrito = () => {
                   </div>
 
                   <p className="text-2xl font-bold text-emerald-400">
-                    ${totalPrice.toFixed(2)}
+                    {currentFormatter(totalPrice)}
                   </p>
                 </div>
 
